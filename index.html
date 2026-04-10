@@ -79,7 +79,7 @@
                     <a href="#about" class="font-medium hover:text-primary transition-all-300">关于我</a>
                     <a href="#skills" class="font-medium hover:text-primary transition-all-300">技能特长</a>
                     <a href="#hobbies" class="font-medium hover:text-primary transition-all-300">兴趣爱好</a>
-                    <a href="#contact" class="font-medium hover:text-primary transition-all-300">联系方式</a>
+                    <a href="python-course.html" class="font-medium hover:text-primary transition-all-300">Python课程</a>
                 </nav>
                 
                 <!-- 移动端菜单按钮 -->
@@ -89,15 +89,15 @@
             </div>
             
             <!-- 移动端导航菜单 -->
-            <div class="md:hidden hidden mt-4 pb-4" id="mobile-menu">
-                <nav class="flex flex-col space-y-4">
-                    <a href="#home" class="font-medium hover:text-primary transition-all-300">首页</a>
-                    <a href="#about" class="font-medium hover:text-primary transition-all-300">关于我</a>
-                    <a href="#skills" class="font-medium hover:text-primary transition-all-300">技能特长</a>
-                    <a href="#hobbies" class="font-medium hover:text-primary transition-all-300">兴趣爱好</a>
-                    <a href="#contact" class="font-medium hover:text-primary transition-all-300">联系方式</a>
-                </nav>
-            </div>
+                <div class="md:hidden hidden mt-4 pb-4" id="mobile-menu">
+                    <nav class="flex flex-col space-y-4">
+                        <a href="#home" class="font-medium hover:text-primary transition-all-300">首页</a>
+                        <a href="#about" class="font-medium hover:text-primary transition-all-300">关于我</a>
+                        <a href="#skills" class="font-medium hover:text-primary transition-all-300">技能特长</a>
+                        <a href="#hobbies" class="font-medium hover:text-primary transition-all-300">兴趣爱好</a>
+                        <a href="python-course.html" class="font-medium hover:text-primary transition-all-300">Python课程</a>
+                    </nav>
+                </div>
         </div>
     </header>
 
@@ -349,71 +349,77 @@
         </div>
     </section>
 
-    <!-- 联系方式 -->
-    <section id="contact" class="py-16 bg-gray-900">
+    <!-- Python基础课程 -->
+    <section class="py-16 bg-gray-900">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">联系方式</h2>
+                <h2 class="text-3xl font-bold mb-4">Python基础课程</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
                 <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
-                    如果你想了解更多关于我的信息，或者有任何合作机会，欢迎与我联系
+                    培养基础编程素养，掌握Python核心技能
                 </p>
             </div>
             
-            <div class="bg-dark rounded-lg p-8 shadow-lg max-w-3xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-dark rounded-lg p-8 shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
-                        <h3 class="text-2xl font-semibold mb-6 text-primary">联系信息</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-primary">课程内容</h3>
                         <ul class="space-y-4">
                             <li class="flex items-start">
-                                <i class="fa fa-map-marker text-primary mt-1 mr-4"></i>
-                                <span>广东省</span>
+                                <i class="fa fa-code text-primary mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium">Python基础语法</h4>
+                                    <p class="text-gray-400">包括Python简介、环境搭建、基本语法结构、控制流程和异常处理</p>
+                                </div>
                             </li>
                             <li class="flex items-start">
-                                <i class="fa fa-university text-primary mt-1 mr-4"></i>
-                                <span>广东科学技术职业学院</span>
+                                <i class="fa fa-database text-primary mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium">Python数据结构</h4>
+                                    <p class="text-gray-400">包括基本数据类型、列表与元组、字典与集合、字符串操作</p>
+                                </div>
                             </li>
                             <li class="flex items-start">
-                                <i class="fa fa-envelope text-primary mt-1 mr-4"></i>
-                                <span>feng13715032112@qq.com</span>
+                                <i class="fa fa-cubes text-primary mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium">函数与模块</h4>
+                                    <p class="text-gray-400">包括函数定义与调用、参数与返回值、模块的导入与使用、包的概念</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-object-group text-primary mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium">面向对象程序设计</h4>
+                                    <p class="text-gray-400">包括类与对象的基本概念、类的定义与实例化、继承与多态、封装与抽象</p>
+                                </div>
                             </li>
                         </ul>
                         <div class="mt-8">
-                            <h4 class="font-semibold mb-4">社交媒体</h4>
-                            <div class="flex space-x-4">
-                                <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-all-300">
-                                    <i class="fa fa-weixin text-white"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-all-300">
-                                    <i class="fa fa-weibo text-white"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-all-300">
-                                    <i class="fa fa-github text-white"></i>
-                                </a>
-                            </div>
+                            <a href="python-course.html" class="px-6 py-3 bg-primary text-white rounded-md font-medium hover:bg-primary/90 transition-all-300 inline-block">
+                                开始学习
+                            </a>
                         </div>
                     </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-6 text-primary">发送消息</h3>
-                        <form>
-                            <div class="mb-4">
-                                <input type="text" placeholder="你的姓名" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-primary text-white">
+                    <div class="relative">
+                        <div class="w-full h-64 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-6xl text-primary mb-4">
+                                    <i class="fa fa-python"></i>
+                                </div>
+                                <h4 class="text-xl font-semibold mb-2">基础编程素养</h4>
+                                <p class="text-gray-400">4周课程 | 约12小时</p>
                             </div>
-                            <div class="mb-4">
-                                <input type="email" placeholder="你的邮箱" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-primary text-white">
-                            </div>
-                            <div class="mb-6">
-                                <textarea placeholder="你的消息" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:border-primary text-white"></textarea>
-                            </div>
-                            <button type="submit" class="w-full px-6 py-3 bg-primary text-white rounded-md font-medium hover:bg-primary/90 transition-all-300">
-                                发送消息
-                            </button>
-                        </form>
+                        </div>
+                        <!-- 装饰元素 -->
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-primary/20 rounded-full blur-lg"></div>
+                        <div class="absolute bottom-0 left-0 w-20 h-20 bg-accent/20 rounded-full blur-lg"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
 
     <!-- 页脚 -->
     <footer class="bg-dark border-t border-gray-800 py-8">
