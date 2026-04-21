@@ -866,19 +866,7 @@ except ValueError:
             });
             
             // 设置默认代码
-            codeMirror.setValue(`# 输入你的Python代码
-print("Hello, Python!")
-
-# 示例: 计算斐波那契数列
-def fibonacci(n):
-    if n <= 1:
-        return n
-    else:
-        return fibonacci(n-1) + fibonacci(n-2)
-
-# 打印前10个斐波那契数
-for i in range(10):
-    print(f"fib({i}) = {fibonacci(i)}")`);
+            codeMirror.setValue(``);
         }
         
         // 运行代码
@@ -939,19 +927,7 @@ for i in range(10):
         
         // 重置代码
         function resetCode() {
-            const defaultCode = `# 输入你的Python代码
-print("Hello, Python!")
-
-# 示例: 计算斐波那契数列
-def fibonacci(n):
-    if n <= 1:
-        return n
-    else:
-        return fibonacci(n-1) + fibonacci(n-2)
-
-# 打印前10个斐波那契数
-for i in range(10):
-    print(f"fib({i}) = {fibonacci(i)}")`;
+            const defaultCode = ``;
     
     codeMirror.setValue(defaultCode);
     document.getElementById('code-output').innerHTML = '<p class="text-gray-500">点击运行按钮执行代码</p>';
