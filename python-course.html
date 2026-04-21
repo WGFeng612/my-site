@@ -10,6 +10,13 @@
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CodeMirror -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <!-- Pyodide -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
     <!-- Tailwind 配置 -->
     <script>
         tailwind.config = {
@@ -110,10 +117,10 @@
                         Python <span class="text-gradient">基础课程</span>
                     </h1>
                     <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-primary">
-                        培养基础编程素养
+                        商务数据分析与应用专业大一新生定制
                     </h2>
                     <p class="text-lg text-gray-300 mb-8">
-                        从零基础开始学习Python编程，专注于培养基础编程素养，包括Python基础语法、数据结构、函数与模块、面向对象程序设计等核心内容。
+                        针对商务数据分析与应用专业大一新生，在AI时代高效学习Python基础的需求，本课程聚焦实用，面向未来，优先掌握AI与数据分析的"刚需"部分，避免在非核心领域浪费时间。
                     </p>
                     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                         <a href="#syllabus" class="px-6 py-3 bg-primary text-white rounded-md font-medium hover:bg-primary/90 transition-all-300 text-center">
@@ -132,8 +139,8 @@
                                     <div class="text-6xl md:text-8xl text-primary mb-2">
                                         <i class="fa fa-python"></i>
                                     </div>
-                                    <h3 class="text-xl md:text-2xl font-semibold">基础编程素养</h3>
-                                    <p class="text-gray-400">4周课程 | 约12小时</p>
+                                    <h3 class="text-xl md:text-2xl font-semibold">AI时代Python学习</h3>
+                                    <p class="text-gray-400">聚焦实用 | 面向未来</p>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +169,7 @@
                     </div>
                     <h3 class="text-xl font-semibold mb-2">课程时长</h3>
                     <p class="text-gray-400">
-                        4周课程，约12小时
+                        6-8周
                     </p>
                 </div>
                 
@@ -173,9 +180,9 @@
                     </div>
                     <h3 class="text-xl font-semibold mb-2">适合人群</h3>
                     <p class="text-gray-400">
+                        商务数据分析与应用专业大一新生<br>
                         编程初学者<br>
-                        需要基础编程素养的学生<br>
-                        想了解Python基础的专业人士
+                        希望在AI时代高效学习Python的学生
                     </p>
                 </div>
                 
@@ -186,10 +193,58 @@
                     </div>
                     <h3 class="text-xl font-semibold mb-2">学习目标</h3>
                     <p class="text-gray-400">
-                        掌握Python基础语法<br>
-                        理解Python数据结构<br>
-                        熟悉函数与模块的使用<br>
-                        掌握面向对象编程思想
+                        掌握Python核心语法<br>
+                        理解AI与数据分析思维<br>
+                        能看懂和编写基础代码<br>
+                        为后续专业学习打下基础
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心学习理念 -->
+    <section class="py-16 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">核心学习理念</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                    优先掌握AI与数据分析的"刚需"部分，避免在非核心领域浪费时间
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 理念卡片 1 -->
+                <div class="bg-gray-900 rounded-lg p-6 shadow-lg card-hover">
+                    <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-bullseye text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">聚焦实用</h3>
+                    <p class="text-gray-400">
+                        优先学习与商务数据分析直接相关的内容，避免学习与专业无关的复杂技术。
+                    </p>
+                </div>
+                
+                <!-- 理念卡片 2 -->
+                <div class="bg-gray-900 rounded-lg p-6 shadow-lg card-hover">
+                    <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-lightbulb-o text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">面向未来</h3>
+                    <p class="text-gray-400">
+                        培养与AI协作的能力，学会使用AI工具辅助编程和数据分析。
+                    </p>
+                </div>
+                
+                <!-- 理念卡片 3 -->
+                <div class="bg-gray-900 rounded-lg p-6 shadow-lg card-hover">
+                    <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-rocket text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">高效学习</h3>
+                    <p class="text-gray-400">
+                        快速掌握核心概念，通过实践巩固知识，避免理论与实践脱节。
                     </p>
                 </div>
             </div>
@@ -197,148 +252,381 @@
     </section>
 
     <!-- 课程大纲 -->
-    <section id="syllabus" class="py-16 bg-dark">
+    <section id="syllabus" class="py-16 bg-gray-900">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold mb-4">课程大纲</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
                 <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
-                    详细的课程内容，帮助你系统性地学习Python编程
+                    针对商务数据分析与应用专业大一新生，聚焦AI时代的Python学习需求
                 </p>
             </div>
             
             <div class="space-y-8">
-                <!-- 章节 1 -->
-                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+                <!-- 第一阶段 -->
+                <div class="bg-dark rounded-lg overflow-hidden shadow-lg">
                     <div class="flex items-center justify-between bg-gray-800 p-4">
-                        <h3 class="text-xl font-semibold text-primary">第1章：Python基础语法</h3>
-                        <span class="text-sm text-gray-400">3小时</span>
+                        <h3 class="text-xl font-semibold text-primary">第一阶段：Python语言核心（约3-4周）</h3>
+                        <span class="text-sm text-gray-400">掌握"够用"的语法与思维</span>
                     </div>
                     <div class="divide-y divide-gray-800">
-                        <div class="p-4 hover:bg-gray-800 transition-all-300">
-                            <div class="flex items-center justify-between">
-                                <span>1.1 Python简介与环境搭建</span>
-                                <span class="text-sm text-gray-400">30分钟</span>
+                        <!-- 1.1 基础语法（快速通关） -->
+                        <div class="p-6 hover:bg-gray-800 transition-all-300">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-lg font-semibold">1.1 基础语法（快速通关）</h4>
+                                <span class="text-sm text-gray-400">变量、数据类型、条件语句、循环</span>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">学习目标</h5>
+                                    <ul class="list-disc list-inside text-gray-300 space-y-1">
+                                        <li>掌握变量的定义和使用</li>
+                                        <li>理解Python的基本数据类型</li>
+                                        <li>学会使用条件语句和循环</li>
+                                        <li>能够构建基本的程序逻辑</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">理论讲解</h5>
+                                    <p class="text-gray-300 mb-3">基础语法是所有后续学习的基石，目标是能看懂和编写基础的AI与数据分析代码。</p>
+                                    <p class="text-gray-300 mb-3">重点掌握：</p>
+                                    <ul class="list-disc list-inside text-gray-300 space-y-1">
+                                        <li>变量：用于存储数据的容器</li>
+                                        <li>数据类型：整数、浮点数、字符串、布尔值、列表、字典、元组</li>
+                                        <li>条件语句：if-else用于根据条件执行不同的代码</li>
+                                        <li>循环：for循环用于遍历序列，while循环用于条件重复</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">代码示例</h5>
+                                    <pre class="bg-gray-900 p-3 rounded text-sm overflow-x-auto">
+# 变量和数据类型
+name = "小白"  # 字符串
+age = 18  # 整数
+height = 1.75  # 浮点数
+is_student = True  # 布尔值
+
+# 列表 - 用于存储多个元素
+courses = ["Python", "数据分析", "商务统计"]
+
+# 字典 - 用于存储键值对
+student_info = {
+    "name": "小白",
+    "age": 18,
+    "major": "商务数据分析"
+}
+
+# 条件语句
+if age >= 18:
+    print(f"{name}已经成年了")
+else:
+    print(f"{name}还未成年")
+
+# for循环 - 遍历列表
+print("课程列表:")
+for course in courses:
+    print(f"- {course}")
+
+# while循环 - 条件重复
+count = 1
+print("计数:")
+while count <= 5:
+    print(count)
+    count += 1
+                                    </pre>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">练习题目</h5>
+                                    <ol class="list-decimal list-inside text-gray-300 space-y-2">
+                                        <li>创建变量存储你的个人信息（姓名、年龄、专业），然后打印出来。</li>
+                                        <li>使用列表存储5门课程名称，然后使用for循环打印每门课程。</li>
+                                        <li>使用字典存储一个学生的信息，包括姓名、年龄、成绩等，然后打印出来。</li>
+                                        <li>使用if-else判断一个数是正数、负数还是零。</li>
+                                        <li>使用while循环计算1到100的和。</li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
-                        <div class="p-4 hover:bg-gray-800 transition-all-300">
-                            <div class="flex items-center justify-between">
-                                <span>1.2 基本语法结构</span>
-                                <span class="text-sm text-gray-400">45分钟</span>
+                        
+                        <!-- 1.2 函数与模块化 -->
+                        <div class="p-6 hover:bg-gray-800 transition-all-300">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-lg font-semibold">1.2 函数与模块化</h4>
+                                <span class="text-sm text-gray-400">函数定义、参数传递、返回值</span>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">学习目标</h5>
+                                    <ul class="list-disc list-inside text-gray-300 space-y-1">
+                                        <li>理解函数的概念和作用</li>
+                                        <li>学会定义和调用函数</li>
+                                        <li>掌握函数参数和返回值的使用</li>
+                                        <li>理解模块化编程的思想</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">理论讲解</h5>
+                                    <p class="text-gray-300 mb-3">函数是一段可重用的代码，用于完成特定的任务。通过函数，我们可以将复杂的代码分解为更小、更易管理的部分。</p>
+                                    <p class="text-gray-300 mb-3">深刻理解函数的定义，参数传递和返回值是组织代码，实现复用的关键，未来调用各种AI库函数都基于此。</p>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">代码示例</h5>
+                                    <pre class="bg-gray-900 p-3 rounded text-sm overflow-x-auto">
+# 定义函数
+def calculate_sum(a, b):
+    """计算两个数的和"""
+    return a + b
+
+# 调用函数
+result = calculate_sum(5, 3)
+print("和:", result)
+
+# 带默认参数的函数
+def calculate_area(length, width=1):
+    """计算矩形面积"""
+    return length * width
+
+# 调用函数
+print("面积:", calculate_area(5, 3))
+print("正方形面积:", calculate_area(4))
+
+# 返回多个值的函数
+def get_student_info():
+    """获取学生信息"""
+    name = "小白"
+    age = 18
+    major = "商务数据分析"
+    return name, age, major
+
+# 调用函数
+name, age, major = get_student_info()
+print(f"姓名: {name}, 年龄: {age}, 专业: {major}")
+
+# 模块化示例 - 模拟导入模块
+# 假设我们有一个模块 called utils.py
+# def calculate_average(numbers):
+#     return sum(numbers) / len(numbers)
+
+# 导入模块并使用
+# import utils
+# numbers = [1, 2, 3, 4, 5]
+# print("平均值:", utils.calculate_average(numbers))
+                                    </pre>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">练习题目</h5>
+                                    <ol class="list-decimal list-inside text-gray-300 space-y-2">
+                                        <li>定义一个函数，计算两个数的和并返回结果。</li>
+                                        <li>定义一个函数，判断一个数是否为偶数。</li>
+                                        <li>定义一个函数，接收一个列表，返回列表中所有元素的和。</li>
+                                        <li>定义一个函数，计算一个列表的平均值。</li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
-                        <div class="p-4 hover:bg-gray-800 transition-all-300">
-                            <div class="flex items-center justify-between">
-                                <span>1.3 控制流程（条件语句与循环）</span>
-                                <span class="text-sm text-gray-400">1小时</span>
+                        
+                        <!-- 1.3 面向对象编程(OOP)基础 -->
+                        <div class="p-6 hover:bg-gray-800 transition-all-300">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-lg font-semibold">1.3 面向对象编程(OOP)基础</h4>
+                                <span class="text-sm text-gray-400">类、对象、方法</span>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">学习目标</h5>
+                                    <ul class="list-disc list-inside text-gray-300 space-y-1">
+                                        <li>理解类和对象的基本概念</li>
+                                        <li>学会定义类和创建对象</li>
+                                        <li>掌握方法的定义和调用</li>
+                                        <li>理解面向对象编程的基本原理</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">理论讲解</h5>
+                                    <p class="text-gray-300 mb-3">面向对象编程是一种编程范式，使用类和对象来组织代码。因为许多AI库(如Scikit-learn, TensorFlow)的模型都是以类的形式提供的，知道如何创建对象，调用方法是必须的。</p>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">代码示例</h5>
+                                    <pre class="bg-gray-900 p-3 rounded text-sm overflow-x-auto">
+# 定义类
+class Student:
+    def __init__(self, name, age, major):
+        """初始化方法"""
+        self.name = name
+        self.age = age
+        self.major = major
+    
+    def introduce(self):
+        """自我介绍方法"""
+        return f"你好，我是{self.name}，今年{self.age}岁，专业是{self.major}。"
+    
+    def update_age(self, new_age):
+        """更新年龄方法"""
+        self.age = new_age
+        return f"年龄已更新为{self.age}岁"
+
+# 创建对象
+student = Student("小白", 18, "商务数据分析")
+
+# 调用方法
+print(student.introduce())
+print(student.update_age(19))
+print(student.introduce())
+
+# 模拟AI库的使用
+# 假设我们使用Scikit-learn的线性回归模型
+# from sklearn.linear_model import LinearRegression
+
+# 创建模型对象
+# model = LinearRegression()
+
+# 调用方法训练模型
+# model.fit(X_train, y_train)
+
+# 调用方法进行预测
+# predictions = model.predict(X_test)
+                                    </pre>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">练习题目</h5>
+                                    <ol class="list-decimal list-inside text-gray-300 space-y-2">
+                                        <li>创建一个简单的类，表示一个学生，包含姓名、年龄、成绩等属性。</li>
+                                        <li>为学生类添加一个方法，计算平均成绩。</li>
+                                        <li>创建一个类，表示一个课程，包含课程名称、学分、教师等属性。</li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
-                        <div class="p-4 hover:bg-gray-800 transition-all-300">
-                            <div class="flex items-center justify-between">
-                                <span>1.4 异常处理</span>
-                                <span class="text-sm text-gray-400">45分钟</span>
+                        
+                        <!-- 1.4 文件操作与异常处理 -->
+                        <div class="p-6 hover:bg-gray-800 transition-all-300">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-lg font-semibold">1.4 文件操作与异常处理</h4>
+                                <span class="text-sm text-gray-400">读写文本文件、异常处理</span>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">学习目标</h5>
+                                    <ul class="list-disc list-inside text-gray-300 space-y-1">
+                                        <li>学会使用open函数打开文件</li>
+                                        <li>掌握文件的读写操作</li>
+                                        <li>理解with语句的使用</li>
+                                        <li>掌握异常处理的基本用法</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">理论讲解</h5>
+                                    <p class="text-gray-300 mb-3">文件操作是Python中常见的操作，用于读取和写入文件。学会读写文本文件(如CSV,TXT)，这是加载数据集的必备技能。</p>
+                                    <p class="text-gray-300 mb-3">异常处理则能让你的程序更健壮，应对各种意外错误。</p>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">代码示例</h5>
+                                    <pre class="bg-gray-900 p-3 rounded text-sm overflow-x-auto">
+# 写入文件 - 模拟数据集
+with open("students.csv", "w", encoding="utf-8") as f:
+    f.write("姓名,年龄,专业,成绩\n")
+    f.write("小白,18,商务数据分析,90\n")
+    f.write("小红,19,商务数据分析,85\n")
+    f.write("小明,18,商务数据分析,92\n")
+
+print("文件写入成功！")
+
+# 读取文件
+with open("students.csv", "r", encoding="utf-8") as f:
+    content = f.read()
+    print("文件内容:")
+    print(content)
+
+# 逐行读取并处理
+print("\n逐行处理:")
+with open("students.csv", "r", encoding="utf-8") as f:
+    # 跳过表头
+    next(f)
+    for line in f:
+        # 分割行数据
+        data = line.strip().split(",")
+        name, age, major, score = data
+        print(f"姓名: {name}, 年龄: {age}, 专业: {major}, 成绩: {score}")
+
+# 异常处理示例
+try:
+    # 尝试读取不存在的文件
+    with open("不存在的文件.txt", "r") as f:
+        content = f.read()
+except FileNotFoundError:
+    print("错误: 文件不存在")
+except Exception as e:
+    print(f"未知错误: {e}")
+
+# 异常处理在数据分析中的应用
+try:
+    # 尝试转换数据类型
+    score = "九十"
+    score_int = int(score)
+    print(f"成绩: {score_int}")
+except ValueError:
+    print("错误: 无法将字符串转换为整数")
+                                    </pre>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-primary mb-2">练习题目</h5>
+                                    <ol class="list-decimal list-inside text-gray-300 space-y-2">
+                                        <li>创建一个CSV文件，存储5个学生的信息，包括姓名、年龄、专业、成绩。</li>
+                                        <li>读取刚才创建的CSV文件，计算所有学生的平均成绩。</li>
+                                        <li>使用异常处理来处理文件不存在的情况。</li>
+                                        <li>使用异常处理来处理数据类型转换错误的情况。</li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- 章节 2 -->
-                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+                <!-- 第二阶段 -->
+                <div class="bg-dark rounded-lg overflow-hidden shadow-lg">
                     <div class="flex items-center justify-between bg-gray-800 p-4">
-                        <h3 class="text-xl font-semibold text-primary">第2章：Python数据结构</h3>
-                        <span class="text-sm text-gray-400">3小时</span>
+                        <h3 class="text-xl font-semibold text-primary">第二阶段：AI与数据分析核心库（约3-4周）</h3>
+                        <span class="text-sm text-gray-400">重中之重</span>
                     </div>
                     <div class="divide-y divide-gray-800">
                         <div class="p-4 hover:bg-gray-800 transition-all-300">
                             <div class="flex items-center justify-between">
-                                <span>2.1 基本数据类型（数字、字符串、布尔值）</span>
-                                <span class="text-sm text-gray-400">45分钟</span>
+                                <span>2.1 NumPy</span>
+                                <span class="text-sm text-gray-400">数组创建、索引、切片和基本运算</span>
                             </div>
                         </div>
                         <div class="p-4 hover:bg-gray-800 transition-all-300">
                             <div class="flex items-center justify-between">
-                                <span>2.2 列表与元组</span>
-                                <span class="text-sm text-gray-400">45分钟</span>
+                                <span>2.2 Pandas</span>
+                                <span class="text-sm text-gray-400">Series和DataFrame，数据读取、清洗、筛选、分组聚合</span>
                             </div>
                         </div>
                         <div class="p-4 hover:bg-gray-800 transition-all-300">
                             <div class="flex items-center justify-between">
-                                <span>2.3 字典与集合</span>
-                                <span class="text-sm text-gray-400">45分钟</span>
-                            </div>
-                        </div>
-                        <div class="p-4 hover:bg-gray-800 transition-all-300">
-                            <div class="flex items-center justify-between">
-                                <span>2.4 字符串操作与方法</span>
-                                <span class="text-sm text-gray-400">45分钟</span>
+                                <span>2.3 Matplotlib / Seaborn</span>
+                                <span class="text-sm text-gray-400">折线图、散点图、柱状图、直方图</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- 章节 3 -->
-                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+                <!-- 第三阶段 -->
+                <div class="bg-dark rounded-lg overflow-hidden shadow-lg">
                     <div class="flex items-center justify-between bg-gray-800 p-4">
-                        <h3 class="text-xl font-semibold text-primary">第3章：函数与模块</h3>
-                        <span class="text-sm text-gray-400">3小时</span>
+                        <h3 class="text-xl font-semibold text-primary">第三阶段：初级实战与AI工具协同（约1-2周）</h3>
+                        <span class="text-sm text-gray-400">验证与融合</span>
                     </div>
                     <div class="divide-y divide-gray-800">
                         <div class="p-4 hover:bg-gray-800 transition-all-300">
                             <div class="flex items-center justify-between">
-                                <span>3.1 函数定义与调用</span>
-                                <span class="text-sm text-gray-400">45分钟</span>
+                                <span>3.1 实战项目</span>
+                                <span class="text-sm text-gray-400">端到端数据分析小项目</span>
                             </div>
                         </div>
                         <div class="p-4 hover:bg-gray-800 transition-all-300">
                             <div class="flex items-center justify-between">
-                                <span>3.2 函数参数与返回值</span>
-                                <span class="text-sm text-gray-400">45分钟</span>
-                            </div>
-                        </div>
-                        <div class="p-4 hover:bg-gray-800 transition-all-300">
-                            <div class="flex items-center justify-between">
-                                <span>3.3 模块的导入与使用</span>
-                                <span class="text-sm text-gray-400">45分钟</span>
-                            </div>
-                        </div>
-                        <div class="p-4 hover:bg-gray-800 transition-all-300">
-                            <div class="flex items-center justify-between">
-                                <span>3.4 包的概念与使用</span>
-                                <span class="text-sm text-gray-400">45分钟</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 章节 4 -->
-                <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-                    <div class="flex items-center justify-between bg-gray-800 p-4">
-                        <h3 class="text-xl font-semibold text-primary">第4章：面向对象程序设计</h3>
-                        <span class="text-sm text-gray-400">3小时</span>
-                    </div>
-                    <div class="divide-y divide-gray-800">
-                        <div class="p-4 hover:bg-gray-800 transition-all-300">
-                            <div class="flex items-center justify-between">
-                                <span>4.1 类与对象的基本概念</span>
-                                <span class="text-sm text-gray-400">45分钟</span>
-                            </div>
-                        </div>
-                        <div class="p-4 hover:bg-gray-800 transition-all-300">
-                            <div class="flex items-center justify-between">
-                                <span>4.2 类的定义与实例化</span>
-                                <span class="text-sm text-gray-400">45分钟</span>
-                            </div>
-                        </div>
-                        <div class="p-4 hover:bg-gray-800 transition-all-300">
-                            <div class="flex items-center justify-between">
-                                <span>4.3 继承与多态</span>
-                                <span class="text-sm text-gray-400">45分钟</span>
-                            </div>
-                        </div>
-                        <div class="p-4 hover:bg-gray-800 transition-all-300">
-                            <div class="flex items-center justify-between">
-                                <span>4.4 封装与抽象</span>
-                                <span class="text-sm text-gray-400">45分钟</span>
+                                <span>3.2 AI协作练习</span>
+                                <span class="text-sm text-gray-400">与AI编程助手协作</span>
                             </div>
                         </div>
                     </div>
@@ -347,62 +635,151 @@
         </div>
     </section>
 
-    <!-- 学习资源 -->
-    <section class="py-16 bg-gray-900">
+    <!-- 学习资源与策略 -->
+    <section class="py-16 bg-dark">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">学习资源</h2>
+                <h2 class="text-3xl font-bold mb-4">学习资源与策略</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
                 <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
-                    推荐的学习资源，帮助你更好地掌握Python编程
+                    高效学习策略与推荐资源，帮助你快速掌握Python编程
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- 资源卡片 1 -->
-                <div class="bg-dark rounded-lg p-6 shadow-lg card-hover">
-                    <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4">
-                        <i class="fa fa-book text-primary text-xl"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 学习策略 -->
+                <div class="bg-gray-900 rounded-lg p-6 shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-6 text-primary">高效学习策略</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">环境搭建</h4>
+                                <p class="text-gray-400">强烈推荐使用 Anaconda 发行版，它集成了Python、Jupyter Notebook和主要科学计算库，避免环境配置的麻烦。</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">学习资源</h4>
+                                <p class="text-gray-400">选择一本或一套教程即可，切忌囤积资料。所有理论学习必须立刻配合动手敲代码进行。</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">心态调整</h4>
+                                <p class="text-gray-400">接受"不完美掌握"。遇到一时难以理解的概念，可以先标记，在后续使用Pandas、Sklearn库时再回头结合实例理解。</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Python官方文档</h3>
-                    <p class="text-gray-400 mb-4">
-                        Python官方提供的详细文档，包含所有语法和标准库的使用说明
-                    </p>
-                    <a href="https://docs.python.org/zh-cn/3/" target="_blank" class="text-primary hover:underline flex items-center">
-                        访问官网 <i class="fa fa-external-link ml-2"></i>
-                    </a>
                 </div>
                 
-                <!-- 资源卡片 2 -->
-                <div class="bg-dark rounded-lg p-6 shadow-lg card-hover">
-                    <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4">
-                        <i class="fa fa-code text-primary text-xl"></i>
+                <!-- 推荐资源 -->
+                <div class="bg-gray-900 rounded-lg p-6 shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-6 text-primary">推荐资源</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fa fa-book text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">书籍</h4>
+                                <p class="text-gray-400">《Python编程：从入门到实践》前部分基础章节 + 数据可视化章节。</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fa fa-laptop text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">在线教程</h4>
+                                <p class="text-gray-400">廖雪峰Python教程（基础部分）、莫烦Python（有视频和实例）。</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fa fa-code text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2">官方文档</h4>
+                                <p class="text-gray-400">Python官方文档、NumPy、Pandas、Matplotlib官方文档。</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">在线编程平台</h3>
-                    <p class="text-gray-400 mb-4">
-                        提供在线编程环境，无需安装，直接在浏览器中编写和运行Python代码
-                    </p>
-                    <a href="https://repl.it/" target="_blank" class="text-primary hover:underline flex items-center">
-                        访问平台 <i class="fa fa-external-link ml-2"></i>
-                    </a>
-                </div>
-                
-                <!-- 资源卡片 3 -->
-                <div class="bg-dark rounded-lg p-6 shadow-lg card-hover">
-                    <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4">
-                        <i class="fa fa-youtube-play text-primary text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">视频教程</h3>
-                    <p class="text-gray-400 mb-4">
-                        免费的Python视频教程，适合初学者的入门学习
-                    </p>
-                    <a href="https://www.youtube.com/results?search_query=python+beginner+tutorial" target="_blank" class="text-primary hover:underline flex items-center">
-                        观看教程 <i class="fa fa-external-link ml-2"></i>
-                    </a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- 总结 -->
+    <section class="py-16 bg-gradient-tech">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-4">总结</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto bg-dark/80 rounded-lg p-8 shadow-lg">
+                <p class="text-lg text-gray-300 mb-6">
+                    在AI时代，商务数据分析专业的学生学习Python，路径应极度清晰：快速掌握基础语法以具备与AI对话的能力，然后全力攻克NumPy、Pandas、Matplotlib这"三剑客"，形成扎实的数据处理与可视化核心技能。
+                </p>
+                <p class="text-lg text-gray-300 mb-6">
+                    这套组合拳能让你在AI工具的辅助下，如虎添翼，真正专注于商务洞察和模型应用，而不是陷入繁琐的代码细节。
+                </p>
+                <p class="text-lg text-primary font-semibold">
+                    从现在开始，聚焦目标，动手实践吧！
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 代码运行器 -->
+    <div id="code-runner" class="fixed bottom-8 right-8 z-50 w-96 max-w-[90vw]">
+        <!-- 代码运行器头部 -->
+        <div id="code-runner-header" class="bg-gray-800 rounded-t-lg p-3 flex justify-between items-center cursor-pointer">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-code text-primary"></i>
+                <span class="font-semibold">Python代码运行器</span>
+            </div>
+            <button id="code-runner-toggle" class="text-gray-400 hover:text-white">
+                <i class="fa fa-chevron-up"></i>
+            </button>
+        </div>
+        
+        <!-- 代码运行器内容 -->
+        <div id="code-runner-content" class="bg-dark rounded-b-lg shadow-xl border border-gray-800">
+            <!-- 代码编辑器 -->
+            <div class="p-4">
+                <div class="mb-2 flex justify-between items-center">
+                    <span class="text-sm text-gray-400">代码</span>
+                    <div class="flex space-x-2">
+                        <button id="reset-code" class="px-3 py-1 bg-gray-700 text-white rounded text-sm hover:bg-gray-600 transition-all-300">
+                            重置
+                        </button>
+                        <button id="run-code" class="px-3 py-1 bg-primary text-white rounded text-sm hover:bg-primary/90 transition-all-300">
+                            运行
+                        </button>
+                    </div>
+                </div>
+                <textarea id="code-editor" class="w-full h-48 bg-gray-900 rounded p-2 text-sm"></textarea>
+            </div>
+            
+            <!-- 运行结果 -->
+            <div class="border-t border-gray-800 p-4">
+                <div class="mb-2 text-sm text-gray-400">运行结果</div>
+                <div id="code-output" class="w-full h-32 bg-gray-900 rounded p-2 text-sm overflow-auto">
+                    <p class="text-gray-500">点击运行按钮执行代码</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- 页脚 -->
     <footer class="bg-dark border-t border-gray-800 py-8">
@@ -458,6 +835,140 @@
                 header.classList.add('py-3');
                 header.classList.remove('py-2');
             }
+        });
+        
+        // 代码运行器
+        let pyodide;
+        let codeMirror;
+        
+        // 初始化Pyodide
+        async function initPyodide() {
+            try {
+                pyodide = await loadPyodide({
+                    indexURL: "https://cdn.jsdelivr.net/pyodide/v0.25.0/full/"
+                });
+                console.log('Pyodide 初始化成功');
+            } catch (error) {
+                console.error('Pyodide 初始化失败:', error);
+                document.getElementById('code-output').innerHTML = `<p class="text-red-400">Pyodide 初始化失败: ${error.message}</p>`;
+            }
+        }
+        
+        // 初始化CodeMirror
+        function initCodeMirror() {
+            codeMirror = CodeMirror.fromTextArea(document.getElementById('code-editor'), {
+                mode: 'python',
+                theme: 'dracula',
+                lineNumbers: true,
+                indentUnit: 4,
+                tabSize: 4,
+                lineWrapping: true
+            });
+            
+            // 设置默认代码
+            codeMirror.setValue(`# 输入你的Python代码
+print("Hello, Python!")
+
+# 示例: 计算斐波那契数列
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+# 打印前10个斐波那契数
+for i in range(10):
+    print(f"fib({i}) = {fibonacci(i)}")`);
+        }
+        
+        // 运行代码
+        async function runCode() {
+            const code = codeMirror.getValue();
+            const outputDiv = document.getElementById('code-output');
+            
+            if (!pyodide) {
+                outputDiv.innerHTML = '<p class="text-red-400">Pyodide 尚未初始化，请稍候...</p>';
+                return;
+            }
+            
+            try {
+                outputDiv.innerHTML = '<p class="text-yellow-400">运行中...</p>';
+                
+                // 重定向标准输出
+                let output = '';
+                pyodide.runPython(`
+                    import sys
+                    from io import StringIO
+                    
+                    # 捕获标准输出
+                    old_stdout = sys.stdout
+                    sys.stdout = StringIO()
+                    
+                    try:
+                        ${code}
+                    except Exception as e:
+                        print(f"错误: {e}")
+                    
+                    # 获取输出
+                    output = sys.stdout.getvalue()
+                    sys.stdout = old_stdout
+                    output
+                `);
+                
+                // 获取输出
+                output = pyodide.globals.get('output');
+                outputDiv.innerHTML = `<pre class="whitespace-pre-wrap">${output || '无输出'}</pre>`;
+            } catch (error) {
+                outputDiv.innerHTML = `<p class="text-red-400">执行错误: ${error.message}</p>`;
+            }
+        }
+        
+        // 切换代码运行器显示/隐藏
+        function toggleCodeRunner() {
+            const content = document.getElementById('code-runner-content');
+            const toggleBtn = document.getElementById('code-runner-toggle');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                toggleBtn.innerHTML = '<i class="fa fa-chevron-up"></i>';
+            } else {
+                content.classList.add('hidden');
+                toggleBtn.innerHTML = '<i class="fa fa-chevron-down"></i>';
+            }
+        }
+        
+        // 重置代码
+        function resetCode() {
+            const defaultCode = `# 输入你的Python代码
+print("Hello, Python!")
+
+# 示例: 计算斐波那契数列
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+# 打印前10个斐波那契数
+for i in range(10):
+    print(f"fib({i}) = {fibonacci(i)}")`;
+    
+    codeMirror.setValue(defaultCode);
+    document.getElementById('code-output').innerHTML = '<p class="text-gray-500">点击运行按钮执行代码</p>';
+}
+
+        // 初始化
+        window.addEventListener('DOMContentLoaded', function() {
+            // 初始化CodeMirror
+            initCodeMirror();
+            
+            // 初始化Pyodide
+            initPyodide();
+            
+            // 绑定事件
+            document.getElementById('run-code').addEventListener('click', runCode);
+            document.getElementById('reset-code').addEventListener('click', resetCode);
+            document.getElementById('code-runner-header').addEventListener('click', toggleCodeRunner);
         });
     </script>
 </body>
