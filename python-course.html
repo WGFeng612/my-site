@@ -967,6 +967,55 @@ except ValueError:
             });
         }
         
+        // 初始化拖拽功能
+        function initDrag() {
+            const codeRunner = document.getElementById('code-runner');
+            const codeRunnerHeader = document.getElementById('code-runner-header');
+            
+            let isDragging = false;
+            let startX;
+            let startY;
+            let startLeft;
+            let startTop;
+            
+            codeRunnerHeader.addEventListener('mousedown', function(e) {
+                // 只有点击头部空白区域才触发拖拽，避免点击按钮时触发
+                if (e.target.tagName === 'BUTTON' || e.target.closest('button')) {
+                    return;
+                }
+                
+                isDragging = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                startLeft = parseInt(codeRunner.style.left) || 0;
+                startTop = parseInt(codeRunner.style.top) || 0;
+                document.body.style.cursor = 'move';
+                codeRunner.style.zIndex = '100'; // 确保拖拽时在最上层
+            });
+            
+            document.addEventListener('mousemove', function(e) {
+                if (!isDragging) return;
+                
+                const deltaX = e.clientX - startX;
+                const deltaY = e.clientY - startY;
+                
+                // 计算新位置，限制在视窗内
+                const newLeft = Math.max(0, Math.min(window.innerWidth - codeRunner.offsetWidth, startLeft + deltaX));
+                const newTop = Math.max(0, Math.min(window.innerHeight - codeRunner.offsetHeight, startTop + deltaY));
+                
+                codeRunner.style.left = newLeft + 'px';
+                codeRunner.style.top = newTop + 'px';
+                codeRunner.style.bottom = 'auto';
+                codeRunner.style.right = 'auto';
+            });
+            
+            document.addEventListener('mouseup', function() {
+                isDragging = false;
+                document.body.style.cursor = '';
+                codeRunner.style.zIndex = '50'; // 恢复默认层级
+            });
+        }
+        
         // 重置代码
         function resetCode() {
             const defaultCode = ``;
@@ -985,6 +1034,9 @@ except ValueError:
             
             // 初始化调整大小功能
             initResize();
+            
+            // 初始化拖拽功能
+            initDrag();
             
             // 绑定事件
             document.getElementById('run-code').addEventListener('click', runCode);
