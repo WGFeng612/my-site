@@ -778,6 +778,11 @@ except ValueError:
                     <p class="text-gray-500">点击运行按钮执行代码</p>
                 </div>
             </div>
+            
+            <!-- 调整大小手柄 -->
+            <div id="resize-handle" class="w-full h-2 bg-gray-800 cursor-n-resize flex justify-center items-center">
+                <div class="w-8 h-1 bg-gray-600 rounded-full"></div>
+            </div>
         </div>
     </div>
 
@@ -925,6 +930,43 @@ except ValueError:
             }
         }
         
+        // 调整代码运行器大小
+        function initResize() {
+            const resizeHandle = document.getElementById('resize-handle');
+            const codeRunner = document.getElementById('code-runner');
+            const codeEditor = document.getElementById('code-editor');
+            
+            let isResizing = false;
+            let startY;
+            let startHeight;
+            
+            resizeHandle.addEventListener('mousedown', function(e) {
+                isResizing = true;
+                startY = e.clientY;
+                startHeight = codeRunner.offsetHeight;
+                document.body.style.cursor = 'n-resize';
+            });
+            
+            document.addEventListener('mousemove', function(e) {
+                if (!isResizing) return;
+                
+                const deltaY = e.clientY - startY;
+                const newHeight = Math.max(300, startHeight - deltaY); // 最小高度300px
+                
+                codeRunner.style.height = newHeight + 'px';
+                // 调整代码编辑器高度
+                const codeRunnerContent = document.getElementById('code-runner-content');
+                const contentHeight = codeRunnerContent.offsetHeight;
+                const editorHeight = contentHeight - 120; // 减去其他元素的高度
+                codeEditor.style.height = Math.max(100, editorHeight) + 'px';
+            });
+            
+            document.addEventListener('mouseup', function() {
+                isResizing = false;
+                document.body.style.cursor = '';
+            });
+        }
+        
         // 重置代码
         function resetCode() {
             const defaultCode = ``;
@@ -940,6 +982,9 @@ except ValueError:
             
             // 初始化Pyodide
             initPyodide();
+            
+            // 初始化调整大小功能
+            initResize();
             
             // 绑定事件
             document.getElementById('run-code').addEventListener('click', runCode);
